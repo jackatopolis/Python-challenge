@@ -19,10 +19,8 @@ file_path = 'Resources/budget_data.csv'
 budget_csv = os.path.join(file_path)
 
 with open(budget_csv) as csvfile:
-    csv_reader = csv.reader(csvfile, delimiter=",")
-    
+    csv_reader = csv.reader(csvfile, delimiter=",")    
     csv_header = next(csv_reader)
- #  print(f"CSV Header: {csv_header}")
     
     # Initialize variables
     num_months = 0
