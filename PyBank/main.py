@@ -1,20 +1,18 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[17]:
+# In[24]:
 
 
 # Import dependencies
-
 import os
 import csv
 
 
-# In[20]:
+# In[28]:
 
 
 # Read and open the budget data csv file
-
 file_path = 'Resources/budget_data.csv'
 budget_csv = os.path.join(file_path)
 
@@ -49,28 +47,27 @@ with open(budget_csv) as csvfile:
     # Print out results
     print("FINANCIAL ANALYSIS")
     print("By: Jack Cohen")
-    print("---------------------------")
+    print("------------------------")
     print(f"Total Months: {num_months}")
     print(f"Total: ${total}")
     print(f"Average Change: ${PL_avg}")
-    print(f"Greatest Increase in Profits: {great_inc_date} ${great_inc_val}")
-    print(f"Greatest Decrease in Profits: {great_dec_date} ${great_dec_val}")
+    print(f"Greatest Increase in Profits: {great_inc_date} (${great_inc_val})")
+    print(f"Greatest Decrease in Profits: {great_dec_date} (${great_dec_val})")
 
 
-# In[21]:
+# In[29]:
 
 
 # Output results and analysis to .txt file
-
 file1 = open("Analysis/Financial_Analysis.txt","w")
 L = ["FINANCIAL ANALYSIS \n",
      "By: Jack Cohen \n",
-     "--------------------------- \n",
-     f"Total Months: {num_months} \n",
+     "------------------------\n",
+     f"Total Months: {num_months}\n",
      f"Total: ${total} \n",
      f"Average Change: ${PL_avg} \n",
-     f"Greatest Increase in Profits: {great_inc_date} ${great_inc_val} \n",
-     f"Greatest Decrease in Profits: {great_dec_date} ${great_dec_val} \n"]
+     f"Greatest Increase in Profits: {great_inc_date} (${great_inc_val}) \n",
+     f"Greatest Decrease in Profits: {great_dec_date} (${great_dec_val}) \n"]
 file1.writelines(L)
 file1.close()
 
